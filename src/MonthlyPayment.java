@@ -6,19 +6,18 @@
 
 /**
  *
- * @author Faaiez Mohammed
+ * @author Test
  */
-public class AnnualMembership extends Membership {
+public class MonthlyPayment extends PaymentPlan {
 
-    String memType = "Annual";
+    String payPlan = "Monthly";
 
-    public AnnualMembership() {
+    public MonthlyPayment() {
 
     }
 
     @Override
-    public String getType() {
-        return this.memType;
+    public String getPlan() {
+        return this.payPlan;
     }
-
 }

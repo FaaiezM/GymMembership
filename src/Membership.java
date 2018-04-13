@@ -11,31 +11,23 @@
 public class Membership {
 
     // Fields
-    private String MEMTYPE;
+    private String memType;
 
     // Constructor
-    public Membership(String MEMTYPE) {
-        this.MEMTYPE = MEMTYPE;
-    }
-
     public Membership() {
     }
 
     // Methods
-    public String getMEMTYPE() {
-        return ("You currently have a(n) " + MEMTYPE + " membership.");
+    public String getMemType() {
+        return memType;
     }
 
-    public void setMEMTYPE(String MEMTYPE) {
-        this.MEMTYPE = MEMTYPE;
-    }
-
-    public void removeMEMTYPE() {
-
+    public void setMEMTYPE(String memType) {
+        this.memType = memType;
     }
 
     String getType() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.memType;
     }
 
 }

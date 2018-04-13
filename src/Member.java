@@ -11,6 +11,9 @@ public class Member {
     private ACTIVITIES activity1;
     int m = 0;
     private Membership memType;
+    private Payment payStatus;
+    private Payment payPlan;
+
     ArrayList<Member> members = new ArrayList<>();
 
     Scanner sc = new Scanner(System.in);
@@ -64,6 +67,14 @@ public class Member {
         this.memType = memType;
     }
 
+    public void setPayPlan(PaymentPlan payPlan) {
+        this.payPlan = payPlan;
+    }
+
+    public void setPayStatus(PaymentStatus payStatus) {
+        this.payStatus = payStatus;
+    }
+
     public void addMembers() {
         String addMember;
         do {
@@ -85,7 +96,7 @@ public class Member {
             m++;
 
             System.out.println("Select MemType");
-            System.out.println("1) Trial Member /n 2) Three Month Member /n 3) Annual Member");
+            System.out.println(" 1) Trial Member \n 2) Three Month Member \n 3) Annual Member");
             switch (sc.nextInt()) {
                 case 1:
                     newMember.setMemType(new TrialMembership());
@@ -95,6 +106,28 @@ public class Member {
                     break;
                 case 3:
                     newMember.setMemType(new AnnualMembership());
+                    break;
+            }
+
+            System.out.println("Select payPlan");
+            System.out.println(" 1) Monthly Payment \n 2) Annual Payment");
+            switch (sc.nextInt()) {
+                case 1:
+                    newMember.setPayPlan(new MonthlyPayment());
+                    break;
+                case 2:
+                    newMember.setPayPlan(new AnnualPayment());
+                    break;
+            }
+
+            System.out.println("Select isPaid");
+            System.out.println(" 1) Has Paid \n 2) Has not Paid");
+            switch (sc.nextInt()) {
+                case 1:
+                    newMember.setPayStatus(new PaidPayment());
+                    break;
+                case 2:
+                    newMember.setPayStatus(new OverduePayment());
                     break;
             }
 
@@ -122,7 +155,9 @@ public class Member {
                 + ", lastName='" + lastName1 + '\''
                 + ", ID_NUM=" + m1
                 + ", activity=" + activity1
-                + ", Membership Type: " + memType.getType() + '}' + "\n";
+                + ", Membership Type: " + memType.getType()
+                + ", Payment Plan: " + payPlan.getPlan()
+                + ", Payment Status: " + payStatus.getStatus() + '}' + "\n";
     }
 
     public ArrayList<Member> deleteMember(int m) {

@@ -6,19 +6,19 @@
 
 /**
  *
- * @author Faaiez Mohammed
+ * @author Test
  */
-public class AnnualMembership extends Membership {
+public class OverduePayment extends PaymentStatus {
 
-    String memType = "Annual";
+    String payStatus = "Overdue";
 
-    public AnnualMembership() {
+    public OverduePayment() {
 
     }
 
     @Override
-    public String getType() {
-        return this.memType;
+    public String getStatus() {
+        return this.payStatus;
     }
 
 }

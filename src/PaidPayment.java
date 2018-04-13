@@ -6,13 +6,19 @@
 
 /**
  *
- * @author Faaiez Mohammed
+ * @author Test
  */
-public class PaymentPlan extends PaymentStatus {
+public class PaidPayment extends PaymentStatus {
 
-    public PaymentPlan(boolean isPaid) {
-        super(isPaid);
+    String payStatus = "Paid";
 
+    public PaidPayment() {
+
+    }
+
+    @Override
+    public String getStatus() {
+        return this.payStatus;
     }
 
 }

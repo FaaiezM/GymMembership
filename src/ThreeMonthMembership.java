@@ -10,7 +10,7 @@
  */
 public class ThreeMonthMembership extends Membership {
 
-    String memType = "You have a three month membership.";
+    String memType = "Three Month";
 
     public ThreeMonthMembership() {
 

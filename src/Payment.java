@@ -8,29 +8,39 @@
  *
  * @author Faaiez Mohammed
  */
-public class PaymentStatus {
+public class Payment {
 
     // Fields
-    private boolean isPaid;
-    private boolean monthlyPayment = true;
+    private String payStatus;
+    private String payPlan;
 
     // Constructor
-    public PaymentStatus(boolean isPaid) {
-        // if/else that returns value depending on
-        if (isPaid == false) {
-            System.out.println("You have an overdue payment");
-        } else {
-            System.out.println("You have paid for this month");
-        }
+    public Payment() {
+
     }
 
     // Methods
-    public boolean isIsPaid() {
-        return isPaid;
+    public String getPayStatus() {
+        return payStatus;
     }
 
-    public void setIsPaid(boolean isPaid) {
-        this.isPaid = isPaid;
+    public void setPayStatus(String payStatus) {
+        this.payStatus = payStatus;
     }
 
+    String getStatus() {
+        return this.payStatus;
+    }
+
+    public String getPayPlan() {
+        return payPlan;
+    }
+
+    public void setPayPlan(String payPlan) {
+        this.payPlan = payPlan;
+    }
+
+    String getPlan() {
+        return this.payPlan;
+    }
 }

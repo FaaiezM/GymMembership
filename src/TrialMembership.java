@@ -10,7 +10,7 @@
  */
 public class TrialMembership extends Membership {
 
-    String memType = "You have a trial membership.";
+    String memType = "Trial";
 
     public TrialMembership() {
 
