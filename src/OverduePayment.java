@@ -6,16 +6,19 @@
 
 /**
  *
- * @author Test
+ * @author Faaiez Mohammed
  */
-public class OverduePayment extends PaymentStatus {
+public class OverduePayment extends Payment {
 
-    String payStatus = "Overdue";
+    // Field
+    private final String payStatus = "Overdue";
 
+    // Constructor
     public OverduePayment() {
 
     }
 
+    // Overrides method in Payment class
     @Override
     public String getStatus() {
         return this.payStatus;

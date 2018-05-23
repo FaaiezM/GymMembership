@@ -28,7 +28,8 @@ public class Payment {
         this.payStatus = payStatus;
     }
 
-    String getStatus() {
+    // Gets the status of the member's payment
+    public String getStatus() {
         return this.payStatus;
     }
 
@@ -40,7 +41,8 @@ public class Payment {
         this.payPlan = payPlan;
     }
 
-    String getPlan() {
+    // Gets the current payment plan the member has
+    public String getPlan() {
         return this.payPlan;
     }
 }

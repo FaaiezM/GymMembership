@@ -6,16 +6,19 @@
 
 /**
  *
- * @author Test
+ * @author Faaiez Mohammed
  */
-public class AnnualPayment extends PaymentPlan {
+public class AnnualPayment extends Payment {
 
-    String payPlan = "Annual";
+    // Field
+    private final String payPlan = "Annual";
 
+    // Constructor
     public AnnualPayment() {
 
     }
 
+    // Overrides method in Payment
     @Override
     public String getPlan() {
         return this.payPlan;

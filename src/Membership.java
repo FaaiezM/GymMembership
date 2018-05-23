@@ -22,11 +22,12 @@ public class Membership {
         return memType;
     }
 
-    public void setMEMTYPE(String memType) {
+    public void setMemType(String memType) {
         this.memType = memType;
     }
 
-    String getType() {
+    // Gets the type of Membership the member has
+    public String getType() {
         return this.memType;
     }
 

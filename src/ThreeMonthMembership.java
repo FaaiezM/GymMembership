@@ -10,12 +10,15 @@
  */
 public class ThreeMonthMembership extends Membership {
 
-    String memType = "Three Month";
+    // Field
+    private final String memType = "Three Month";
 
+    // Constructor
     public ThreeMonthMembership() {
 
     }
 
+    // Overrides method in Membership class
     @Override
     public String getType() {
         return this.memType;
